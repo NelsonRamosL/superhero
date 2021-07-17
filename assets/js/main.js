@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
   function tarjetas(heroArray) {
-    console.log("targeta", heroArray);
+    // console.log("targeta", heroArray);
 
     let contenido = `
 <div class="card mb-3" style="max-width: 540px;">
@@ -52,10 +52,10 @@ $(document).ready(function () {
         y: heroArray[item],
       };
       dataArreglo2.push(dato);
-      console.log(dataArreglo2)
-    });
 
-    console.log("arreglo para el grafico",dataArreglo2);
+      });
+
+    // console.log("arreglo para el grafico",dataArreglo2);
 
 
     let chart = new CanvasJS.Chart("chartContainer", {
@@ -73,9 +73,9 @@ $(document).ready(function () {
 
 
     });
-    console.log(chart);
+    // console.log(chart);
     chart.render();
-
+console.log(dataArreglo2);
   };
 
 
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
   //Función para cargar los datos mediante Ajax
   const heroArray = function (url) {
-    console.log("dentro del Ajax");
+    // console.log("dentro del Ajax");
     $.ajax({
       type: "GET",
       url: url,
@@ -135,10 +135,8 @@ $(document).ready(function () {
     } else {
 
       e.preventDefault();
-      console.log("dentro del click")
+      // console.log("dentro del click")
       heroArray(`https://superheroapi.com/api.php/10226740132508658/${numero}`)
-
-
 
     }
 
