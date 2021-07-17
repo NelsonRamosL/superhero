@@ -44,17 +44,18 @@ $(document).ready(function () {
 
   //Función para cargar los graficos
   let cargarGraficos = (heroArray) => {
-    let dataArreglo = [];
+    let dataArreglo2 = [];
 
     Object.keys(heroArray).forEach((item, index, array) => {
       let dato = {
         label: item,
         y: heroArray[item],
       };
-      dataArreglo.push(dato);
+      dataArreglo2.push(dato);
+      console.log(dataArreglo2)
     });
 
-    console.log(dataArreglo);
+    console.log("arreglo para el grafico",dataArreglo2);
 
 
     let chart = new CanvasJS.Chart("chartContainer", {
@@ -66,7 +67,7 @@ $(document).ready(function () {
       data: [
         {
           type: "column",
-          dataPoints: dataArreglo,
+          dataPoints: dataArreglo2,
         }
       ]
 
@@ -89,7 +90,7 @@ $(document).ready(function () {
       //  data: "data",
       dataType: "json",
       success: function (data) {
-        console.log(data);
+       
         tarjetas(data);
         cargarGraficos(data.powerstats);
       },
