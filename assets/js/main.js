@@ -8,15 +8,17 @@ $(document).ready(function () {
     let aliases = heroArray.biography.aliases.join("  ");
 
     // card de boostrap con los datos del objeto heroArray
+    // <div class="card mb-3 d-flex justify-content-center" style="max-width: 540px;">
+
     let contenido = `
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 justify-content-center bg-dark text-white">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="${heroArray.image.url}" width="100%" alt="${heroArray.name}">
+            <img src="${heroArray.image.url}" width="95%"  alt="${heroArray.name}">
           </div>
            <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Nombre :${heroArray.name}</h5>
+              <h2 class="card-title">Nombre : ${heroArray.name}</h2>
               <p class="card-text">Conecciones :  <small class="text-muted">${heroArray.connections['group-affiliation']}</small></p>
               <p class="card-text">Publicado por : <small class="text-muted">${heroArray.biography.publisher}</small></p>
               <p class="card-text">Ocupacion : <small class="text-muted">${heroArray.work.occupation}</small></p>
@@ -27,8 +29,8 @@ $(document).ready(function () {
             </div>
            </div>
         </div>
-     </div>
-    `;
+       </div>
+       `;
 
     // poner titulo en el id encontrado y cargar la card en el id ficha 
     $('#encontrado').html(`Super Heroe ${heroArray.name} Encontrado`);
@@ -63,11 +65,11 @@ $(document).ready(function () {
     }
 
     let chart = new CanvasJS.Chart("chartContainer", {
-      theme: "light2", // "light1", "light2", "dark1", "dark2"
+      theme: "dark2", // "light1", "light2", "dark1", "dark2"
       exportEnabled: true,
       animationEnabled: true,
       title: {
-        text: "Desktop Browser Market Share in 2016"
+        text: "Poder del Hero"
       },
       data: [{
         type: "pie",
@@ -118,7 +120,7 @@ $(document).ready(function () {
 
   // main  
 
-   
+
   $('#boton').click(function (e) {
 
     let numero = $('#numHero').val();
@@ -127,7 +129,7 @@ $(document).ready(function () {
     $('#errornum').removeClass('alert');
     $('#errornum').removeClass('alert-danger');
 
-        // Validar ingreso de numero entre 1 y 732. no permite digitos ni letras 
+    // Validar ingreso de numero entre 1 y 732. no permite digitos ni letras 
     if (numero < 1 || numero >= 732) {
       $('#errornum').addClass('alert');
       $('#errornum').addClass('alert-danger');
