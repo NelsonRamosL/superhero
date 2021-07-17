@@ -1,1 +1,31 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
+
+:root {
+    --white: #fff;    /* Color letras  */
+    --black: rgb(0, 0, 0);     /* Color background  */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+body {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    color: var(--white);
+    background-color: var(--black);
+    font-family: 'Marvel', sans-serif;
+    font-size: 25px;
+
+  }
+
+ .box{
+     padding-left: 10%;
+     padding-right: 10%;
+
+ }
+      

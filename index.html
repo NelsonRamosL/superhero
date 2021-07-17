@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,16 +9,15 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-
-
+  <link rel="icon" href="assets/img/favicon.ico" type="image/png">
 </head>
 
 <body>
 
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">SuperHero</a>
+    <nav class="navbar-expand-lg navbar navbar-dark bg-dark mb-5">
+      <a class="navbar-brand" href="#"><img src="assets/img/favicon.ico" class="img-fluid" alt=""> SuperHero</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,31 +26,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="https://superheroapi.com/" target="_blank">Pagina Oficial <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="nav-link" href="#numHero">Buscador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#encontrado">Super Heroe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#chartContainer">Poderes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Api Privada</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+       
       </div>
     </nav>
   </header>
@@ -61,18 +52,19 @@
     <section>
       <article>
 
-        <div class="form-group">
-          <img src="assets/img/sh1.jpg" alt="">
+        <div class="form-group mb-5">
+          <img src="assets/img/sh1.jpg" class="img-fluid" alt="">
         </div>
-        <div class="form-group">
-          <h3>Encuentra tu SuperHero</h3>
+        
+        <div class="form-group box">
+          <h1>Encuentra tu SuperHero</h1>
 
 
           <label for="nombresuperhero">Ingresa número del SuperHero a buscar</label>
-          <input type="number" class="form-control" id="numHero">
+          <input type="number" class="form-control" id="numHero" placeholder="Buscador por Numero" >
           <small id="errornum"></small>
-        </div>
-
+        
+      </div>
         <button type="submit" id="boton" class="btn btn-primary">Buscar</button>
 
       </article>
@@ -80,7 +72,7 @@
 <div class="text-center" id="encontrado">Super Heroe Encontrado</div>
 
 <article class="row">
-<div id="ficha">ficha</div>
+<div id="ficha"></div>
 <div id="chartContainer"></div>
 
   
