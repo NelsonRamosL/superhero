@@ -42,41 +42,7 @@ $(document).ready(function () {
   }
 
 
-  //Función para cargar los graficos
-  let cargarGraficos = (heroArray) => {
-    let dataArreglo2 = [];
-
-    Object.keys(heroArray).forEach((item, index, array) => {
-      let dato = {
-        label: item,
-        y: heroArray[item],
-      };
-      dataArreglo2.push(dato);
-
-      });
-
-    // console.log("arreglo para el grafico",dataArreglo2);
-
-
-    let chart = new CanvasJS.Chart("chartContainer", {
-
-      title: {
-        text: "Prueba de Graficos",
-      },
-      
-      data: [
-        {
-          type: "column",
-          dataPoints: dataArreglo2,
-        }
-      ]
-
-
-    });
-    // console.log(chart);
-    chart.render();
-console.log(dataArreglo2);
-  };
+ 
 
 
 
@@ -90,9 +56,9 @@ console.log(dataArreglo2);
       //  data: "data",
       dataType: "json",
       success: function (data) {
-       
+
         tarjetas(data);
-        cargarGraficos(data.powerstats);
+        // cargarGraficos(data.powerstats);
       },
       error: function (data) {
         console.log(data)
